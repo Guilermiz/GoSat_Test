@@ -12,6 +12,7 @@ Detalhes da consulta:
 - **Método: POST**
 - **URL: http://127.0.0.1:8000/api/consulta**
 - **Requisição:**
+  
   ![image](https://github.com/Guilermiz/GoSat_Test/assets/80459748/39f416de-48d3-4aa4-ba41-c429fa479c59)
 - **Retorno:**
 
