@@ -20,5 +20,5 @@ Detalhes da consulta:
 
 ## Relatorio
 
-Acessando a rota web **http://127.0.0.1:8000/relatorio** é possível ver um relatório geral com as ofertas oferecidas a CPFs consultados
+Acessando a rota web **http://127.0.0.1:8000/relatorio** é possível ver um relatório geral com as ofertas oferecidas a CPFs consultados montado buscando dados que foram gravados no banco de dados
 
