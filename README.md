@@ -16,6 +16,8 @@ Detalhes da consulta:
   ![image](https://github.com/Guilermiz/GoSat_Test/assets/80459748/39f416de-48d3-4aa4-ba41-c429fa479c59)
 - **Retorno:**
 
+  ![image](https://github.com/Guilermiz/GoSat_Test/assets/80459748/fc188ef5-80df-4163-a9d8-76f682b99e11)
+
 
 ## Relatorio
 
