@@ -5,11 +5,11 @@
 @section('content')
 
 <div class="container">
-    <h3>Aqui você pode ver um relatório de Consultas recentes</h3>
+    <h3>Consultas Feitas</h3>
     <hr>
     
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <table class="table table-hover">
                 <thead>
                     <tr>
@@ -22,25 +22,68 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($consultas as $consulta)
+                    @foreach($cpfs as $cpf)
                         <tr>
-                            <td>{{ $consulta->cpf }}</td>
-                            <td>{{ $consulta->instituicaoFinanceira }}</td>
-                            <td>{{ $consulta->modalidadeCredito }}</td>
-                            @if ($consulta->valorAPagar == 0.00)
-                                <td>Valor Socilitado ou Quantidade de Parcelas inválido</td>
-                            @else
-                                <td>{{ $consulta->valorAPagar }}</td>
-                            @endif
-                            <td>{{ $consulta->valorSolicitado }}</td>
-                            <td>{{ $consulta->taxaJuros }}</td>
+                            <td>{{ $cpf->cpf }}</td>
+                            <td>
+                            @foreach($consultas as $consulta)
+                                @if($consulta->cpf == $cpf->cpf)
+                                    <table>
+                                        <tr>
+                                            <td><span>{{ $consulta->instituicaoFinanceira }}</span></td>
+                                        </tr>
+                                    </table>
+                                @endif
+                            @endforeach
+                            </td>
+                            <td>
+                            @foreach($consultas as $consulta)
+                                @if($consulta->cpf == $cpf->cpf)
+                                    <table>
+                                        <tr>
+                                            <td><span>{{ $consulta->modalidadeCredito }}</span></td>
+                                        </tr>
+                                    </table>
+                                @endif
+                            @endforeach
+                            </td>
+                            <td>
+                            @foreach($consultas as $consulta)
+                                @if($consulta->cpf == $cpf->cpf)
+                                    <table>
+                                        <tr>
+                                            <td><span>{{ $consulta->valorAPagar }}</span></td>
+                                        </tr>
+                                    </table>
+                                @endif
+                            @endforeach
+                            </td>
+                            <td>
+                            @foreach($consultas as $consulta)
+                                @if($consulta->cpf == $cpf->cpf)
+                                    <table>
+                                        <tr>
+                                            <td><span>{{ $consulta->valorSolicitado }}</span></td>
+                                        </tr>
+                                    </table>
+                                @endif
+                            @endforeach
+                            </td>
+                            <td>
+                            @foreach($consultas as $consulta)
+                                @if($consulta->cpf == $cpf->cpf)
+                                    <table>
+                                        <tr>
+                                            <td><span>{{ $consulta->taxaJuros }}</span></td>
+                                        </tr>
+                                    </table>
+                                @endif
+                            @endforeach
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
             </table>
-        </div>
-        <div class="col-md-4">
-            Gráfico
         </div>
     </div>
 
